@@ -1,5 +1,7 @@
 # BeforeAfterSlider
 
+![](https://img.shields.io/badge/language-ES6-yellow.svg) [![NPM Version](https://img.shields.io/npm/v/before-after-slider.svg)](https://www.npmjs.com/package/before-after-slider) [![LICENSE](https://img.shields.io/npm/l/@eteplus/typeof.svg)](https://github.com/VincentTV/before-after-slider/blob/master/LICENSE) [![](https://img.shields.io/badge/Blog-vincef0ng.cn-brightgreen.svg)](https://vincef0ng.cn)
+
 ###### [README in English](README.md)
 
 轻量级JS库，支持PC鼠标及移动端触摸滑动，轻松简单实现图片Before/After效果。

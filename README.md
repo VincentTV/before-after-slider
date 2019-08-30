@@ -1,5 +1,7 @@
 # BeforeAfterSlider
 
+![](https://img.shields.io/badge/language-ES6-yellow.svg) [![NPM Version](https://img.shields.io/npm/v/before-after-slider.svg)](https://www.npmjs.com/package/before-after-slider) [![LICENSE](https://img.shields.io/npm/l/@eteplus/typeof.svg)](https://github.com/VincentTV/before-after-slider/blob/master/LICENSE) [![](https://img.shields.io/badge/Blog-vincef0ng.cn-brightgreen.svg)](https://vincef0ng.cn)
+
 ###### [中文 README](README-zh_CN.md)
 
 BeforeAfterSlider is a lightweight Javascript library without any dependencies, to compare images in before/after view.
