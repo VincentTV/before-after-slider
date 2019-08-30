@@ -14,23 +14,23 @@
   <script src="../dist/slider.bundle.js"></script>
 </head>
 <body>
-  <h1 style="text-align: center;">Before/After Slider @Vincent F0ng</h1>
-
+  <h1 style="text-align: center;">Before/After Slider @Vincent Fong</h1>
+  <p style="text-align: center;">Slider1: [ width: 90%, height: 400px, line: false ]</p>
   <div id="slider1"></div>
-
+  <p style="text-align: center;">Slider2: [ width: 70% ]</p>
   <div id="slider2"></div>
 
 
   <script>
     window.onload = function() {
       new SliderBar({
-        el: "#slider",
+        el: "#slider1",
         beforeImg: "./after.jpg",
         afterImg: "./before.jpg",
         width: "90%",
         height: "400px",
         line: false
-      })
+      });
       new SliderBar({
         el: "#slider2",
         beforeImg: "./after.jpg",

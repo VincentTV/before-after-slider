@@ -1,4 +1,4 @@
-# SlideRuler [Demo](https://vincenttv.github.io/before-after-slider/example)
+# BeforeAfterSlider [Demo](https://vincenttv.github.io/before-after-slider/example)
 
 ###### [README in English](README.md)
 
@@ -7,14 +7,14 @@
 - 滑动区域自适应居中，图片以高度自适应居中，不必额外样式处理，方便布局。
 - API简洁，易上手。支持 PC 及移动端。
 
-![example]()
 
 ## 属性
 
-| 属性           | 类型      | 默认值               | 描述                             |
+| 属性           | 类型     | 默认值               | 描述                             |
 | :------------ | :------- | :------------------ | :------------------------------ |
-| beforeImg     | String   |                     | 图片1的 URL（必选参数）            |
-| afterImg      | String   |                     | 图片2的 URL（必选参数）            |
+| el            | String   |（必选参数）           | 容器，"#sliderId"                |
+| beforeImg     | String   |（必选参数）           | 图片1的 URL                      |
+| afterImg      | String   |（必选参数）           | 图片2的 URL                      |
 | width         | String   | '100%'              | 滑动区宽度,支持各种值(%,px,em,rem) |
 | height        | String   | none                | 滑动区高度                        |
 | line          | Boolean  | true                | 是否需要添加分割线                 |
@@ -33,6 +33,35 @@
 npm install before-after-slider --save
 ```
 
+### Usage Example
+
+- **Native JavaScript**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="vincentfong" />
+    <title>Before/After slider @vincentfong</title>
+  </head>
+  <body>
+    <div id="mySlider"></div>
+    
+    <script src="./slide-ruler.js"></script>
+    <script>
+      new SliderBar({
+        el: "#slider1",
+        beforeImg: "./after.jpg",
+        afterImg: "./before.jpg",
+        width: "90%",
+        height: "400px",
+        line: false
+      });
+    </script>
+  </body>
+</html>
+```
 
 ## How to Contribute
 
