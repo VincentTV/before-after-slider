@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Before/After Slider</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script src="../dist/slider.bundle.js"></script>
+</head>
+<body>
+  <h1 style="text-align: center;">Before/After Slider @Vincent F0ng</h1>
+
+  <div id="slider1"></div>
+
+  <div id="slider2"></div>
+
+
+  <script>
+    window.onload = function() {
+      new SliderBar({
+        el: "#slider",
+        beforeImg: "./after.jpg",
+        afterImg: "./before.jpg",
+        width: "90%",
+        height: "400px",
+        line: false
+      })
+      new SliderBar({
+        el: "#slider2",
+        beforeImg: "./after.jpg",
+        afterImg: "./before.jpg",
+        width: "70%",
+      })
+    }
+  </script>
+</body>
+</html>

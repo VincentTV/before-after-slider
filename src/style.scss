@@ -1,0 +1,65 @@
+$mainColor: rgba(0, 0, 0, .5);
+
+.slider-container {
+  /* width: 80%;
+  height: 400px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .slider-wrap {
+    position: relative;
+    height: 100%;
+    img {
+      display: block;
+      height: 100%;
+      user-select: none;
+    }
+    .before-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .slider-btn {
+      display: block;
+      width: 6px;
+      height: 100%;
+      background: $mainColor;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      cursor: ew-resize;
+      /* cursor: ew-resize; 鼠标样式，左右滑动 */
+
+      &::after {
+        width: 50px;
+        height: 50px;
+        background-color: $mainColor;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '< >';
+        color: white;
+        font-size: 25px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px #000;
+        transition: all .3s ease;
+      }
+      &:hover::after {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+      }
+    }
+  }
+}
