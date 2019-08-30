@@ -1,4 +1,12 @@
+/*
+ * @Desc: Before After Slider
+ * @Author: vincentfong
+ * @Date: 2019-08-30
+ * @LastEditors: vincentfong
+ * @LastEditTime: 2019-08-31
+ */
 import './style.scss';
+
 class SliderBar {
   constructor(options = {}) {
     // 可选参数

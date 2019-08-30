@@ -1,8 +1,6 @@
 $mainColor: rgba(0, 0, 0, .5);
 
 .slider-container {
-  /* width: 80%;
-  height: 400px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +32,6 @@ $mainColor: rgba(0, 0, 0, .5);
       top: 0;
       transform: translateX(-50%);
       cursor: ew-resize;
-      /* cursor: ew-resize; 鼠标样式，左右滑动 */
 
       &::after {
         width: 50px;

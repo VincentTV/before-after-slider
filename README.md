@@ -1,67 +1,111 @@
-# BeforeAfterSlider [Demo](https://vincenttv.github.io/before-after-slider/example)
+# BeforeAfterSlider
 
 ###### [中文 README](README-zh_CN.md)
 
-- 原生ES6开发、不依赖任何框架和库的轻量级图片Before/After效果
-- 可自定义图片、区域大小、滑动条及颜色等
-- 滑动区域自适应居中，图片以高度自适应居中，不必额外样式处理，方便布局。
-- API简洁，易上手。支持 PC 及移动端。
+BeforeAfterSlider is a lightweight Javascript library without any dependencies, to compare images in before/after view.
 
+- Support mousemove & touchmove.
+- Lightweight, only 9KB.
+- Adaptive width.
+- Custom image, size & slider etc.
+- Adaptive centering without any CSS.
+- API simple and easy to use.
 
-## 属性
+![](https://cdn.jsdelivr.net/gh/VincentTV/CDN@master/post/before-after-slider/slider.gif)
 
-| 属性           | 类型     | 默认值               | 描述                             |
-| :------------ | :------- | :------------------ | :------------------------------ |
-| el            | String   |（必选参数）           | 容器，"#sliderId"                |
-| beforeImg     | String   |（必选参数）           | 图片1的 URL                      |
-| afterImg      | String   |（必选参数）           | 图片2的 URL                      |
-| width         | String   | '100%'              | 滑动区宽度,支持各种值(%,px,em,rem) |
-| height        | String   | none                | 滑动区高度                        |
-| line          | Boolean  | true                | 是否需要添加分割线                 |
-| lineColor     | String   | 'rgba(0, 0, 0, .5)' | 分割线颜色，支持透明色              |
+## Demo
+Online demo is available on the [Github page](https://vincenttv.github.io/before-after-slider/example).
+
+***
 
 ## Getting Started
 
-* 模块支持:
-    * 在浏览器环境下使用，通过<script>标签来引入这个类库
-    * 通过NPM安装使用
-    * 兼容 ES6(ES2015) 的模块系统、CommonJS 和 AMD 模块规范
+* Support:
+    * Direct `<script>` include.
+    * NPM install.
+    * Compatible ES6(ES2015) ,CommonJS & AMD modules.
 
-### Install
+### Direct `<script>` include
+
+CDN:
+```html
+<script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
+```
+
+If you use ES Modules, you can include by this：
+```html
+<script type="module">
+  import SliderBar from "https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js";
+</script>
+```
+
+Using:
+```html
+<div id="mySlider"></div>
+
+<script>
+  new SliderBar({
+    el: '#mySlider',            // The container, required
+    beforeImg: './before.jpg',  // before image, required
+    afterImg: './after.jpg',    // after image, required
+    width: "90%",               // slide-wrap width, default 100%
+    height: "400px",            // slide-wrap height, default image-height
+    line: false,                 // Dividing line, default true
+    lineColor: "rgba(0,0,0,0.5)" // Dividing line color, default rgba(0,0,0,0.5)
+  });
+</script>
+```
+
+
+### NPM install
 
 ```shell
 npm install before-after-slider --save
 ```
 
-### Usage Example
-
-- **Native JavaScript**
+**Vue for example**
 
 ```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="vincentfong" />
-    <title>Before/After slider @vincentfong</title>
-  </head>
-  <body>
+<template>
+  <div id="app">
+    <!-- container -->
     <div id="mySlider"></div>
+  </div>
+</template>
 
-    <script src="./slide-ruler.js"></script>
-    <script>
-      new SliderBar({
-        el: "#slider1",
-        beforeImg: "./after.jpg",
-        afterImg: "./before.jpg",
-        width: "90%",
-        height: "400px",
-        line: false
-      });
-    </script>
-  </body>
-</html>
+<script>
+import SliderBar from 'before-after-slider'; // import
+export default {
+  name: 'app',
+  mounted() {
+    // new SliderBar({options});
+    new SliderBar({
+      el: '#mySlider',
+      beforeImg: './before.jpg',
+      afterImg: './after.jpg'
+    });
+  }
+}
+</script>
 ```
+
+## Options
+
+| Option        | Type     | defalut             | Description                     |
+| :------------ | :------- | :------------------ | :------------------------------ |
+| el            | String   | required            | The container, "#sliderId"      |
+| beforeImg     | String   | required            | before-image URL                |
+| afterImg      | String   | required            | after-image URL                 |
+| width         | String   | '100%'              | slide-wrap width,(%,px,em,rem)  |
+| height        | String   | none                | slide-wrap height               |
+| line          | Boolean  | true                | Dividing line                   |
+| lineColor     | String   | 'rgba(0, 0, 0, .5)' | Dividing line color             |
+
+## By the way
+
+**Make sure the two images are the same size.**
+
+**🤪AND Welcome to visit my blog.🤪 [https://vincef0ng.cn](https://vincef0ng.cn/)**
 
 ## How to Contribute
 
